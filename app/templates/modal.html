@@ -1,0 +1,27 @@
+
+<!--<script id="my-modal.html" type="text/ng-template">-->
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+      <h1 class="title">Confirm Purchase</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card" ng-hide="finalSent">
+          <div class="text-center item item-text-wrap">
+            This will cost you <i class="ion ion-social-bitcoin"></i>&nbsp;{{form.cost}}. Do you want to send your coverage request to the BxChange?
+           <p>&nbsp;</p>
+            <button class="button button-positive" ng-click="send()">Yes</button>
+            <button class="button button-assertive" ng-click="closeModal()">No</button>
+          </div>
+        </div>
+
+         <div class="card" ng-show="finalSent">
+          <div class="text-center item item-text-wrap">
+            Congratulations! The 1st month's premium was deducted. Your stuff was sent on the Blockchain!
+           <p>&nbsp;</p>
+            
+            <button class="button button-positive" ng-click="closeModal()">Close</button>
+          </div>
+        </div>
+    </ion-content>
+  </ion-modal-view>
+<!--</script>-->

@@ -1,0 +1,67 @@
+<ion-view view-title="BxChange Market Place">
+
+  <ion-content>
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input  type="search" placeholder="Search" ng-model="searchText">
+      </label>
+      <button  class="button button-icon ion-android-cancel" style="color:white;" ng-click="searchText=''">
+        
+      </button>
+      	
+      	<span style="color:white;">({{ filtered.length}})</span>
+        
+    </div>
+      <div class="item  item-default" style="background-color:#DDD;">
+     Available Investment Opportunities:
+      </div>
+    
+
+    <ion-list can-swipe="true">
+
+      <ion-item class="item item-thumbnail-left item-icon-right item-remove-animate" ng-repeat="policy in filtered = (policys | filter:searchText)" href="#/app/policies/{{policy.id}}"> <img style="top:50px" ng-src="https://static.nationwide.com/static/BOP-shield-icon.png?r=50">
+                    <div class="row">
+                        <div class="col col-75"><strong><i class="ion ion-document-text"></i>&nbsp;Policy#:</strong></div>
+                        <div class="col col-25">{{policy.number}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-75"><strong><i class="ion ion-social-bitcoin"></i>&nbsp;Requested Coverage:</strong></div>
+                        <div class="col col-25"><i class="ion ion-social-bitcoin-outline"></i>&nbsp;{{policy.total | number}}</div>
+                    </div>
+                      <div class="row">
+                        <div class="col col-75"><strong><i class="ion ion-cash"></i>&nbsp;Available Investment:</strong></div>
+                        <div class="col col-25"><i class="ion ion-social-bitcoin-outline"></i>&nbsp;{{policy.avlbl | number}}</div>
+                    </div>
+                      <div class="row">
+                        <div class="col col-75"><strong><i class="ion ion-ios-nutrition"></i><span>&nbsp;Crop Type:</strong></div>
+                        <div class="col col-25">{{policy.crop}}</div>
+                    </div>
+                       <div class="row">
+                        <div class="col col-75"><strong><i class="ion ion-ios-location"></i>&nbsp;Location:</strong></div>
+                        <div class="col col-25">{{policy.addr}}</div>
+                    </div>
+
+        <!--<h2>{{policy.number}}</h2>
+        <p>
+          <i class="ion ion-navicon"></i><span>&nbsp;Requested Coverage: {{policy.total}}</span>
+        </p>
+          <p>
+          <i class="ion ion-navicon"></i><span>&nbsp;Available Investment: {{policy.avlbl}}</span>
+        </p>
+        <p><i class="ion ion-cash"></i><span>&nbsp;Premium: {{policy.premium}}</span></p>
+        <p><i class="ion ion-ios-nutrition"></i><span>&nbsp;Crop Type: {{policy.crop}}</span></p>
+        <p><i class="ion ion-ios-nutrition"></i><span>&nbsp;Location: {{policy.addr}}</span></p>-->
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <!--<ion-reorder-button class="ion-navicon" on-reorder="moveStation(policy,$fromIndex,$toIndex)"></ion-reorder-button>-->
+        <ion-option-button class="mycolor" ng-click="addToFavorites(policy); clicked=!clicked;"><i ng-class="clicked ? 'icon ion-ios-heart-outline' : 'icon ion-heart'"></i></ion-option-button>
+
+      </ion-item>
+
+
+    </ion-list>
+  <br>
+  </ion-content>
+</ion-view>

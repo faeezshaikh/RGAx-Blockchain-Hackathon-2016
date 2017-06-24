@@ -1,0 +1,21 @@
+.ameren {
+	color: #387ef5 !important;
+}
+
+.nav-bar-block, .bar {
+  background-color: #387ef5 !important;
+}
+
+.bar.bar-stable .title {
+    color:white;
+}
+
+.bar-stable .button.button-clear {
+     color:white;
+}
+.item {
+  	color: #387ef5 !important;
+}
+.item-divider {
+  	background-color: #387ef5 !important;
+}

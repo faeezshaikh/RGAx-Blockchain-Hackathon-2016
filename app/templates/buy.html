@@ -1,0 +1,134 @@
+<ion-view view-title="BxChange Insurance Request">
+
+  <ion-content delegate-handle="mainScroll">
+    <!--<div ng-controller="BlockChainController" class="list card" style="margin:auto;width:70%">-->
+    <div ng-controller="BlockChainController" class="list card">
+      <div class="item item-divider item-avatar">
+        <img src="https://avatars2.githubusercontent.com/u/3466845?v=3&s=460" />
+        <div class="row">
+          <div class="col-80">
+            <h2 style="color:white;">Faeez Shaikh</h2>
+            <p style="color:white;">faeez.shaikh@gmail.com</p>
+            <p style="color:white;">{{ownerAccount}}</p>
+          </div>
+          <div class="col-20">
+            <button class="button button-positive pull-right " ng-click="refreshBalance()">
+              Balance: <i class="ion ion-social-bitcoin"></i>&nbsp;<strong>{{ownerBalance | number}}</strong>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="item item-body item-text-wrap">
+        <form name="myForm">
+          <!--<h3>You have <span class="black"><span id="balance"></span> META</span></h3>-->
+
+          <!--<div class="row">
+
+          <div class="col">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">First Name *</span>
+              <input type="text" placeholder="Marty" ng-model="form.firstName" name="firstName" required>
+            </label>
+          </div>
+          <div class="col">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Last Name *</span>
+              <input type="text" placeholder="McFly" ng-model="form.lastName" name="lastName" required>
+            </label>
+          </div>
+        </div>-->
+
+
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Farm Address *</span>
+            <input type="text" placeholder="1901 Chauteau Ave. St. Louis MO 63101" ng-model="form.addr" name="addr" required>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Email *</span>
+            <input type="email" placeholder="faeez.shaikh@gmail.com" ng-model="form.email" name="email" required>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Crop Type
+            </div>
+            <select ng-model="form.crop">
+              <option selected>Soy Beans</option>
+              <option>Oranges</option>
+              <option>Grapes</option>
+            </select>
+          </label>
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Crop Year
+            </div>
+            <select ng-model="form.year">
+              <option selected>2017</option>
+              <option>2018</option>
+            </select>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Acerage *</span>
+            <input type="number" placeholder="10,000 acres" ng-model="form.acerage" name="acerage" required>
+          </label>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <label class="item item-input">
+                  <span class="input-label">Yield Percent:</span>
+                  <span>{{form.value}}%</span>
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <label class="item item-input">
+                  <span class="input-label">Coverage (<i class="ion ion-social-bitcoin"></i>) :</span>
+                  <span>{{form.coverage | number:2}}</span>
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <label class="item item-input">
+                  <span class="input-label">Premium Cost (<i class="ion ion-social-bitcoin"></i>) :</span>
+                  <span>{{form.cost | number:2}}</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="item range range-positive">
+            <i class="icon ion-ios-sunny-outline"></i>25%
+            <input type="range" min="25" max="100" value="40" step="5" ng-model="form.value" ng-change="onRangeChange()">
+            <i class="icon ion-ios-sunny"></i>100%
+          </div>
+
+       
+
+          <p></p>
+          <div class="text-center">
+            <div class="row">
+
+              <div class="col">
+                <button type="button" ng-click="openModal()" ng-disabled="isFormInvalid()" class=" button button-block button-positive">Submit</button>
+              </div>
+              <!--<div class="col"><button type="button" class=" button button-block button-assertive">Cancel</button></div>-->
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+  </ion-content>
+</ion-view></div>
+        </form>
+      </div>
+    </div>
+    <br>
+  </ion-content>
+</ion-view>

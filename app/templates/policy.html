@@ -1,0 +1,120 @@
+<ion-view view-title="Policy Details">
+
+  <ion-content>
+    <!--Policy {{policyId}}-->
+
+    <div class="list card">
+
+    
+      <div class="item item-image">
+        <div class="card">
+           <div class="list">
+              <div class="row">
+              <div class="col">
+
+                 <label class="item item-input">
+              <span class="input-label">Name:</span>
+              <span type="text">{{policyDetails.name}}</span>
+            </label>
+              </div>
+              <div class="col">
+                 <label class="item item-input">
+              <span class="input-label">Address:</span>
+                            <span type="text">{{policyDetails.addr}}</span>
+            </label>
+              </div>
+              </div>
+           
+            <div class="row">
+              <div class="col">
+                 <label class="item item-input">
+              <span class="input-label">Crop Type:</span>
+                            <span type="text">{{policyDetails.crop}}</span>
+            </label>
+              </div>
+              <div class="col">
+                 <label class="item item-input">
+              <span class="input-label">Year:</span>
+                            <span type="text">{{policyDetails.year}}</span>
+            </label>
+              </div>
+            </div>
+
+             <div class="row">
+              <div class="col">
+                <label class="item item-input">
+              <span class="input-label">Acerage:</span>
+                            <span type="text">{{policyDetails.acerage | number}}</span>
+            </label>
+              </div>
+              <div class="col">
+                <label class="item item-input">
+              <span class="input-label">Number:</span>
+                            <span type="text">{{policyDetails.number}}</span>
+            </label>
+              </div>
+             </div>
+            
+
+
+             <div class="row">
+              <div class="col">
+                <label class="item item-input">
+              <span class="input-label">Total Coverage:</span>
+                            <span type="text"><i class="ion ion-social-bitcoin"></i>&nbsp;{{policyDetails.total | number}}</span>
+            </label>
+              </div>
+              <div class="col">
+                <label class="item item-input">
+              <span class="input-label">Total Premium:</span>
+                            <span type="text"><i class="ion ion-social-bitcoin"></i>&nbsp;{{policyDetails.premium | number}}</span>
+            </label>
+              </div>
+             </div>
+            
+             <div class="row">
+            <div class="col">
+              <div class="card">
+                <label class="item item-input">
+                  <span class="input-label">My Share Percent:</span>
+                  <span>{{form.share}}%</span>
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <label class="item item-input">
+                  <span class="input-label">Coverage&nbsp;(<i class="ion ion-social-bitcoin"></i>):</span>
+                  <span class="pull-right">{{myCoverage | number:2}}</span>
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <label class="item item-input">
+                  <span class="input-label">Premium Received (<i class="ion ion-social-bitcoin"></i>) :</span>
+                  <span>{{premiumRecvd | number:2}}</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="item range range-positive">
+            <i class="icon ion-ios-sunny-outline"></i>0%
+            <input type="range" min="0" max="100"  step="5" ng-model="form.share" ng-change="onRangeChange1()">
+            <i class="icon ion-ios-sunny"></i>100%
+          </div>
+          </div>
+
+        </div>
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <!--<i class="icon ion-music-note"></i> Start listening-->
+        <button class="button button-block button-positive" ng-click="invest()">Submit</button>
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>
