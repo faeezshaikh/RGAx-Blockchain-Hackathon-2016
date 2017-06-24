@@ -1,15 +1,5 @@
-# RGAx-Blockchain-Hackathon-2016
-Repository for sharing and preparing for the the RGAx Block Chain hackathon
+Winning Dapp at the RGAx Blockchain Hackathon - September 2016.
 
-Join the gitter chat on https://gitter.im/FusionKoda/Lobby
+For a demo & overview, watch this YouTube video :
 
-And the Trello boards
-
-Software Versions:
- - NodeJS v6.5.0
- - NPM    v3.10.6
-
-
-
--- SmartContract
-The SmartContract is listed under InsuranceExchange.sol
+https://www.youtube.com/watch?v=FshsIlm_Wkk
